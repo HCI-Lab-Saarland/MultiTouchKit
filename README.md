@@ -1,6 +1,6 @@
-# Multi Touch Kit Arduino
+# Multi Touch Kit Arduino Library
 
-Here you find the Arduino Code for Multi Touch Kit.  
+This is an Arduino library for Multi Touch Kit.
 For more information on the project and tutorial, visit our [website](https://hci.cs.uni-saarland.de/multi-touch-kit/)!
 
 ### Installing
@@ -10,9 +10,9 @@ https://www.arduino.cc/en/Guide/Libraries ("Importing a .zip Library")
 
 ### Setup
 
-You need to create a Serial Connection (https://www.arduino.cc/reference/en/language/functions/communication/serial/).
+At first make the Serial Connection (https://www.arduino.cc/reference/en/language/functions/communication/serial/).
 
-Create a `MultiTouchKit` object (`MultiTouchKit mtk;`),
+Then, add the `MultiTouchKit` object (`MultiTouchKit mtk;`),
 
 call `mtk.setup_sensor(int rx, int tx, int* muxPins, bool raw_data, int threshold);` in setup(),
 
