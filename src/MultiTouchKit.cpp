@@ -6,7 +6,8 @@
  For details on using this library see the tutorial at:
  ----> https://hci.cs.uni-saarland.de/multi-touch-kit/
  
- Written by Narjes Pourjafarian, Jan Dickmann, Juergen Steimle (Saarland University), Anusha Withana (University of Sydney), Joe Paradiso (MIT)
+ Written by Narjes Pourjafarian, Jan Dickmann, Juergen Steimle (Saarland University), 
+            Anusha Withana (University of Sydney), Joe Paradiso (MIT)
  MIT license, all text above must be included in any redistribution
  ****************************************************/
 
