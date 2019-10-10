@@ -1,4 +1,4 @@
-# Multi Touch Kit Arduino
+# Multi Touch Kit Arduino Library
 
 This is a library for the Multi-Touch Kit
 Designed and tested to work with Arduino Uno, MEGA2560, LilyPad(ATmega 328P)
