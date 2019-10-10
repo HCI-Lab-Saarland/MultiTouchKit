@@ -1,34 +1,38 @@
-# Multi-Touch Kit Arduino Library
+# Multi Touch Kit Arduino
 
-This is a library for the Multi-Touch Kit
-Designed and tested to work with Arduino Uno, MEGA2560, LilyPad(ATmega 328P)
-
-For details on using this library see the tutorial at:
-----> https://hci.cs.uni-saarland.de/multi-touch-kit/
-
-Here you find the Arduino Code for Multi Touch Kit.
-For more information on the project, visit our [website](https://hci.cs.uni-saarland.de/multi-touch-kit/)!
+Here you find the Arduino Code for Multi Touch Kit.  
+For more information on the project and tutorial, visit our [website](https://hci.cs.uni-saarland.de/multi-touch-kit/)!
 
 ### Installing
 
-Just download the zip folder and install it like described here: https://www.arduino.cc/en/Guide/Libraries ("Importing a .zip Library")
+Download the library as a zip folder and install it as described here: 
+https://www.arduino.cc/en/Guide/Libraries ("Importing a .zip Library")
 
 ### Setup
 
 You need to create a Serial Connection (https://www.arduino.cc/reference/en/language/functions/communication/serial/).
-Create a `MultiTouchKit` object (`MultiTouchKit mtk;`), call `mtk.setup_sensor(int rx, int tx, int* muxPins, bool raw_data, int threshold);` in setup(), and then `mtk.read()` in `loop()`.
+
+Create a `MultiTouchKit` object (`MultiTouchKit mtk;`),
+
+call `mtk.setup_sensor(int rx, int tx, int* muxPins, bool raw_data, int threshold);` in setup(),
+
+and then `mtk.read()` in `loop()`.
 
 If you want the Arduino to send the raw values, set `raw_data` to `true`, if you want it to send true/false for every intersection to indicate if the value is above the given threshold, set `raw_data` to `false`.
-
-Best is you check out the example and change the values as needed.
 
 
 ### Documentation
 
 `setupSensor(int rx, int tx, int* muxPins, bool raw_data, int threshold);`
-`rx` and `tx` are the number of receiver and transmission lines, `int* muxPins` are the digital pins for the multiplexer, 
-`bool raw_data` determins if the arduino should send the raw values (raw_data==true) or for each point if it is touched or not (raw_data==false).
-`int threshold` is the threshold for the touchrecognition, every value above the threshold will be detected as touch if raw_data==false
 
-`read()` will send the raw values or true/false (depending on the chosen mode) for each transmittor/receiver intersection via Serial
-you should call this method in `loop()`.
+`rx` and `tx` define the number of receiver and transmitter lines,
+
+`int* muxPins` defines the digital pins for the multiplexer,
+
+`bool raw_data` determins to send the raw values (raw_data==true) or touch up/down events (raw_data==false).
+
+`int threshold` is the threshold for the touch recognition, every value above the threshold will be detected as touch if :raw_data==false
+
+`read()` function will send the raw values or true/false (depending on the selected mode) for each intersection via Serial port.
+
+The output of `read()` function will be lines of integer values, seperated by commas when 'raw_values = true'. The first number of each line is the number of the activated TX line and the following numbers are the values measured at the RX lines, starting at R0.
