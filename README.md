@@ -18,7 +18,7 @@ call `mtk.setup_sensor(int rx, int tx, int* muxPins, bool raw_data, int threshol
 
 and then `mtk.read()` in `loop()`.
 
-If you want the Arduino to send the raw values, set `raw_data` to `true`, if you want it to send true/false for every intersection to indicate if the value is above the given threshold, set `raw_data` to `false`.
+If you need raw values, set `raw_data` to `true`. If you want to get access to touch up/down values, set `raw_data` to `false`.
 
 
 ### Documentation
