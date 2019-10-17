@@ -1,7 +1,7 @@
 # Multi Touch Kit Arduino Library
 
 This is an Arduino library for Multi Touch Kit.
-For more information on the project and tutorial, visit our [website](https://hci.cs.uni-saarland.de/multi-touch-kit/)!
+For more information on the project and tutorial, visit our [website](https://hci.cs.uni-saarland.de/multi-touch-kit/).
 
 ### Installing
 
