@@ -41,7 +41,7 @@ void setup() {
   Serial.begin(115200);
 
   //setup the Sensor
-  mtk.setup_sensor(TX_num,RX_num,muxPins,raw_data,threshold);
+  mtk.setup_sensor(RX_num,TX_num,muxPins,raw_data,threshold);
 }
 
 void loop() {
